@@ -1,0 +1,65 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "firstname": "Alice",
+        "lastname": "Ganderton",
+        "email": "aliceganderton@gmail.com",
+        "password": "password123",
+        "role": "manager",
+        "workingTimes": {
+          "Monday": { "start": "08:30", "end": "17:00" },
+          "Tuesday": { "start": "08:00", "end": "16:45" },
+          "Wednesday": { "start": "08:30", "end": "19:00" },
+          "Thursday": { "start": "10:00", "end": "17:00" },
+          "Friday": { "start": "08:30", "end": "18:00" }
+        }
+      },
+      {
+        "id": 2,
+        "firstname": "Brice",
+        "lastname": "Morrison",
+        "email": "bricemorrison@gmail.com",
+        "password": "password456",
+        "role": "employee",
+        "workingTimes": {
+          "Monday": { "start": "09:00", "end": "17:30" },
+          "Tuesday": { "start": "09:15", "end": "17:00" },
+          "Wednesday": { "start": "08:45", "end": "18:00" },
+          "Thursday": { "start": "09:00", "end": "17:15" },
+          "Friday": { "start": "08:45", "end": "17:45" }
+        }
+      },
+      {
+        "id": 3,
+        "firstname": "Irma",
+        "lastname": "Williams",
+        "email": "irmawilliams@gmail.com",
+        "password": "password789",
+        "role": "employee",
+        "workingTimes": {
+          "Monday": { "start": "08:00", "end": "16:30" },
+          "Tuesday": { "start": "09:00", "end": "17:30" },
+          "Wednesday": { "start": "08:15", "end": "18:30" },
+          "Thursday": { "start": "09:30", "end": "17:45" },
+          "Friday": { "start": "08:00", "end": "17:15" }
+        }
+      },
+      {
+        "id": 4,
+        "firstname": "Andry",
+        "lastname": "Baker",
+        "email": "andrybaker@gmail.com",
+        "password": "password987",
+        "role": "manager",
+        "workingTimes": {
+          "Monday": { "start": "08:45", "end": "17:15" },
+          "Tuesday": { "start": "09:30", "end": "17:45" },
+          "Wednesday": { "start": "08:30", "end": "18:15" },
+          "Thursday": { "start": "09:00", "end": "17:00" },
+          "Friday": { "start": "08:30", "end": "18:00" }
+        }
+      }
+    ]
+  }
+  
