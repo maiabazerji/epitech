@@ -34,7 +34,7 @@ export default {
     const fetchData = async () => {
       try {
         const token = localStorage.getItem('token');
-        const usersResponse = await axios.get(`http://localhost:4000/api/users`, {
+        const usersResponse = await axios.get(`http://localhost/api/users`, {
           headers: {
             'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ export default {
         }
 
         const workingTimesPromises = users.map(user =>
-          axios.get(`http://localhost:4000/api/workingtime/${user.id}`)
+          axios.get(`http://localhost/api/workingtime/${user.id}`)
         );
 
         const workingTimesResponses = await Promise.all(workingTimesPromises);

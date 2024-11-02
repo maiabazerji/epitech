@@ -28,7 +28,7 @@ const chartOptions = ref({
 const fetchWorkingTimes = async (userID) => {
   try {
     const token = localStorage.getItem('token');
-    const response = await fetch(`http://localhost:4000/api/workingtime/${userID}`, {
+    const response = await fetch(`http://localhost/api/workingtime/${userID}`, {
       method: 'GET',
       headers: {
         'Authorization': `Bearer ${token}`,

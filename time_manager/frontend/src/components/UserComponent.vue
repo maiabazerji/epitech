@@ -10,7 +10,7 @@ export default {
     // Retrieve the JWT token from localStorage or your preferred storage
     const token = localStorage.getItem('token'); 
 
-    const response = await fetch('http://localhost:4000/api/users', {
+    const response = await fetch('http://localhost/api/users', {
       method: 'GET', 
       headers: {
         'Authorization': `Bearer ${token}`, 
