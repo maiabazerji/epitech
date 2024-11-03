@@ -1,7 +1,7 @@
 <script setup>
 import {ref, onMounted} from 'vue';
 import UserComponent from '../components/UserComponent.vue';
-import WorkingTimes from '../components/WorkingTimes.vue';
+// import WorkingTimes from '../components/WorkingTimes.vue';
 import WorkingTime from '../components/WorkingTime.vue';
 import ClockManager from '../components/ClockManager.vue';
 import ChartManager from '../components/ChartManager.vue';
@@ -45,13 +45,13 @@ const closeModal = () => {
   <div class="bg-primary-content flex h-screen">
     <div class="w-1/5 flex justify-center pt-10">
       <div>
-        <div class="flex justify-center">
+        <!-- <div class="flex justify-center">
           <div class="avatar">
             <div class="mask mask-squircle w-24">
               <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="User avatar" />
             </div>
           </div>
-        </div>
+        </div> -->
         <div class="flex flex-col items-center mt-4">
           <p class="text-2xl">Hello, {{ user.username }}!</p>
           <p class="text-sm">{{ user.email }}</p>
@@ -108,12 +108,12 @@ const closeModal = () => {
           <UserComponent />
           <div class="flex">
             <ClockManager />
-            <ChartManager />
           </div>
         </div>
         <div class="grid grid-cols-2 gap-4">
           <WorkingTime />
-          <WorkingTimes />
+          <ChartManager />
+          <!-- <WorkingTimes /> -->
         </div>
       </div>
     </div>

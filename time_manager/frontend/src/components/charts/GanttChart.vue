@@ -6,7 +6,7 @@ const userData = ref([]);
 // Generate days of the week from Monday to Friday with their dates
 onMounted(() => {
   const today = new Date();
-  const dayOfWeek = today.getDay(); // 0 (Sunday) to 6 (Saturday)
+  const dayOfWeek = today.getDay();
   const monday = new Date(today);
   monday.setDate(today.getDate() - dayOfWeek + 1); // Adjust to Monday
 

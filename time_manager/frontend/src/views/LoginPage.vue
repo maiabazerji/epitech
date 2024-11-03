@@ -39,7 +39,7 @@ export default {
                 localStorage.setItem('role', responseData.role);
                 localStorage.setItem('username', responseData.username);
                 localStorage.setItem('email', responseData.email);
-                router.push('/'); 
+                router.push('/dashboard'); 
 
                 email.value = '';
                 password.value = '';

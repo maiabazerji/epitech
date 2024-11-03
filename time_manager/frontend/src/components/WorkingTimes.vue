@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="border rounded-xl mr-4 h-96">
       <AreaChart/>
   </div>
@@ -11,4 +11,4 @@
       AreaChart
     }
   }
-</script>
+</script> -->

@@ -11,6 +11,7 @@ defmodule TimeManagerWeb.Endpoint do
     same_site: "Lax"
   ]
 
+
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
   if code_reloading? do

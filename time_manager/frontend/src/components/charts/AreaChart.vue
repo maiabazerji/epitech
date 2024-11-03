@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
 import { ref, onMounted } from "vue";
 
 const series = ref([]);
@@ -72,4 +72,4 @@ function calculateWorkingHours(day) {
   <div id="chart">
     <apexchart type="area" height="350" :options="chartOptions" :series="series"></apexchart>
   </div>
-</template>
+</template> -->

@@ -1,0 +1,19 @@
+{
+    "name": "Time Manager Dev Container",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "phoenix", // Change this if you want to start in a different service
+    "workspaceFolder": "/workspace", // Adjust if needed based on your project structure
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "elixir-lsp.elixir-ls", // Elixir Language Server
+                "ms-azuretools.vscode-docker", // Docker support
+                "esbenp.prettier-vscode" // Prettier for formatting
+            ]
+        },
+        "settings": {
+            "terminal.integrated.shell.linux": "/bin/bash" // Set your preferred shell
+        }
+    },
+    "remoteUser": "root" // Ensure you're using the correct user
+}
