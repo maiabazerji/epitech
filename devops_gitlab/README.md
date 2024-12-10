@@ -11,11 +11,11 @@ This guide will help you set up the project locally and deploy it on Google Clou
 |── devcontainer
 │   ├── devocontainer.json
 ├── backend
-│   ├── Dockerfile
+│   ├── Dockerfile.zero
 |   |── Dockerfile.dev
 │   └── src/
 ├── frontend
-│   ├── Dockerfile
+│   ├── Dockerfile.zero
 |   |── Dockerfile.dev
 │   └── src/
 ├── nginx
@@ -24,7 +24,8 @@ This guide will help you set up the project locally and deploy it on Google Clou
 |── .env
 |── .gitlab-ci.yml
 ├── docker-compose.dev.yml
-├── docker-compose.yml
+├── deploy.sh
+|── .gitignore
 |
 └── README.md
 
