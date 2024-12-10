@@ -1,0 +1,23 @@
+# Use a Node.js image for development
+FROM node:18-alpine
+
+# Set the working directory
+WORKDIR /app
+
+# Copy package.json and package-lock.json
+COPY package.json package-lock.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy the entire project
+COPY . .
+
+# Expose the development server port
+EXPOSE 4200
+
+# Install Angular CLI
+RUN npm install -g @angular/cli
+
+# Start the development server
+ENTRYPOINT ["ng", "serve", "--host", "0.0.0.0", "--watch", "--poll=2000"]

@@ -1,0 +1,19 @@
+FROM maven:3.6.3-openjdk-17 AS builder
+
+# Set the working directory in the container
+WORKDIR /app
+
+COPY pom.xml .
+COPY src ./src
+
+EXPOSE 8080
+
+# Package the application
+RUN mvn clean package
+
+# Command to run the Spring Boot app
+# when you develop on Java, you can use the following command to run the container
+CMD ["mvn", "spring-boot:run"]
+
+# when you develop on Frontend, you can use the following command to run the container
+# ENTRYPOINT [ "tail", "-f", "/dev/null" ]

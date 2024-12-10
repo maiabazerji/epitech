@@ -1,0 +1,12 @@
+FROM postgres:17.0
+
+# Copy the SQL file to the container
+COPY ./init-scripts/ /docker-entrypoint-initdb.d/
+
+# COPY pg_hba.conf /var/lib/postgresql/data/pg_hba.conf
+
+# Expose the port
+EXPOSE 5432
+
+# Command to run the Postgres server
+CMD ["postgres"]

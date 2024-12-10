@@ -1,0 +1,22 @@
+{
+    "name": "Trinity Dev Container",
+    "dockerComposeFile": [
+        "./docker-compose.yml"
+    ],
+    "service": "backend",
+    "workspaceFolder": "/workspace",
+    "mounts": [
+        "source=${localWorkspaceFolder}/app,target=/workspace,type=bind"
+    ]
+}
+// {
+//     "name": "Trinity Dev Container",
+//     "dockerComposeFile": [
+//         "../docker-compose.yml"
+//     ],
+//     "service": "frontend",
+//     "workspaceFolder": "/workspace",
+//     "mounts": [
+//         "source=${localWorkspaceFolder}/frontend,target=/workspace,type=bind"
+//     ]
+// }

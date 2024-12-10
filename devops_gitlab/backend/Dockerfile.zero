@@ -1,0 +1,10 @@
+FROM openjdk:17-jdk-slim
+
+# Copy the jar file from the build stage
+COPY ./app.jar ./app.jar
+
+# Expose the port the app runs in
+EXPOSE 8080
+
+# Command to run the Spring Boot app
+ENTRYPOINT ["java", "-jar", "app.jar"]

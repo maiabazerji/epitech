@@ -1,0 +1,78 @@
+stages:
+  - build
+  - test
+  - deploy
+
+build-backend:
+  stage: build
+  image: maven:3.9.5-eclipse-temurin-17
+  tags:
+    - trinity
+  script:
+    - set -x
+    - cd backend
+    - mvn clean package -DskipTests
+    - cd target
+    - jar tf app.jar
+    - tar -czf app.tar.gz app.jar
+    - cp app.tar.gz ../../
+  artifacts:
+    paths:
+      - app.tar.gz
+
+build-frontend:
+  stage: build
+  image: timbru31/node-chrome:18
+  tags:
+    - trinity
+  script:
+    - cd frontend
+    - npm install
+    - npm run build --prod
+    - tar -czf dist.tar.gz -C dist/frontend/browser .
+    - mv dist.tar.gz ../
+  artifacts:
+    paths:
+      - dist.tar.gz
+
+
+test-frontend:
+  stage: test
+  image: timbru31/node-chrome:18
+  tags:
+    - trinity
+  script:
+    - cd frontend
+    - npm install -g @angular/cli@latest
+    - npm install
+    - ng test --watch=false --browsers=ChromeHeadlessNoSandbox
+
+
+test-backend:
+  stage: test
+  image: maven:3.9.5-eclipse-temurin-17
+  tags:
+    - trinity
+  script:
+    - mvn --version
+    - cd backend
+    - echo "User test for backend :)"
+    - mvn clean test
+  artifacts:
+   paths:
+     -  backend/target/surefire-reports
+
+
+deploy-development:
+  stage: deploy
+  image: docker:latest
+  tags:
+    - trinity
+  script:
+    - set -x
+    - tar -xzf app.tar.gz
+    - mv app.jar ./backend
+    - mkdir -p dist && tar -xzf dist.tar.gz -C dist
+    - sh deploy.sh
+  only:
+    - dev
